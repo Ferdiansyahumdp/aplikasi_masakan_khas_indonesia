@@ -1,4 +1,4 @@
-# aplikasi_masakan_khas_indonesia
+# masakankhas_indonesia
 
 A new Flutter project.
 

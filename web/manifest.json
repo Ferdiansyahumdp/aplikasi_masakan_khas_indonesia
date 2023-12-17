@@ -1,6 +1,6 @@
 {
-    "name": "aplikasi_masakan_khas_indonesia",
-    "short_name": "aplikasi_masakan_khas_indonesia",
+    "name": "masakankhas_indonesia",
+    "short_name": "masakankhas_indonesia",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
