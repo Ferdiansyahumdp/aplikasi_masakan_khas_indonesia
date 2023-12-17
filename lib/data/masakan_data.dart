@@ -78,10 +78,10 @@ var MasakanList = [
     'Soto Banjar, hidangan khas dari Banjarmasin, Kalimantan Selatan, Indonesia, memikat lidah dengan keunikan rasa dan keharuman bumbunya. Dihidangkan dalam mangkuk berisi kuah yang kaya dan hangat, soto ini menggabungkan potongan daging sapi yang empuk dengan irisan usus atau tetelan sapi, menciptakan paduan rasa yang lezat. Kuahnya, yang diperoleh dari kaldu daging sapi dan tulang, meresap dengan rempah-rempah seperti ketumbar, kunyit, lada, serai, daun salam, dan daun jeruk, memberikan aroma harum yang menggoda dan rasa yang khas. Soto Banjar disajikan dengan mie kuning atau bihun, serta diperkaya dengan tauge, kentang rebus, telur rebus, bawang goreng, dan seledri. Tambahan sambal terasi atau sambal kecap memberikan pilihan rasa yang beragam. Dengan cita rasa yang autentik dan komposisi bumbu yang unik, Soto Banjar menjadi bagian tak terpisahkan dari warisan kuliner Indonesia, menciptakan pengalaman kuliner yang memuaskan dan menggoda selera..',
     imageAsset: 'images/',
     imageUrls: [
-      '',
-      '',
-      '',
-      '',
+      'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2022/11/28/M7skyok/resep-soto-banjar-asli-khas-kalimantan-selatan-simple-banget80.jpg',
+      'https://www.poultryindonesia.com/wp-content/uploads/2022/07/Soto-Banjar-Sumber-Wikipedia.jpeg',
+      'https://assets-pergikuliner.com/uploads/image/picture/664822/picture-1504525995.JPG',
+      'ttps://awsimages.detik.net.id/community/media/visual/2021/11/24/soto-banjar-kuliner-ikonik-kalimantan-selatan-yang-berkuah-gurih-creamy-2.jpeg?w=1200',
     ],
     isFavorite: false,
   ),
@@ -92,10 +92,10 @@ var MasakanList = [
     'Coto Makassar adalah hidangan khas yang berasal dari daerah Makassar, Sulawesi Selatan, Indonesia. Hidangan ini menggoda selera dengan kuah kentalnya yang melibatkan campuran daging sapi, jeroan, dan paru sapi yang dimasak hingga empuk. Kelezatan Coto Makassar tidak hanya terletak pada kekayaan rasa daging, tetapi juga pada harmoni rempah-rempah yang memenuhi kuahnya. Bumbu-bumbu tradisional seperti ketumbar, kunyit, lada, jahe, bawang merah, bawang putih, dan serai memberikan cita rasa khas yang memikat. Hidangan ini biasanya disajikan dengan ketupat atau burasa, serta dilengkapi sambal pedas dan irisan jeruk limau untuk menyempurnakan pengalaman kuliner. Coto Makassar bukan hanya sekadar makanan, tetapi juga sebuah warisan kulinernya yang membanggakan, menjadi pilihan populer untuk dinikmati sebagai hidangan sarapan atau makan malam di berbagai kesempatan.',
     imageAsset: 'images/',
     imageUrls: [
-      ''
-      ''
-      ''
-      '',
+      'https://asset.kompas.com/crops/ljY1r3f3HJaNEuLip3iARQOaK-E=/0x1226:3000x3226/750x500/data/photo/2021/06/11/60c2acf88c6f0.jpg'
+      'https://cdn.shopify.com/s/files/1/0428/0965/5452/files/coto_1_pinterest_piknikdong.jpg?v=1669740131'
+      'https://assets-pergikuliner.com/IMjlzOkc-KH1yWnY_Uu1UnqZ2yY=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/bootsy/image/22904/Coto_Makassar__wisato.id_.jpg'
+      'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/02/03/4035688451.jpg',
     ],
     isFavorite: false,
   ),
@@ -106,10 +106,10 @@ var MasakanList = [
     'Bubur Manado, hidangan khas dari Manado, Sulawesi Utara, Indonesia, menghadirkan pengalaman kuliner yang unik dan menggugah selera. Bubur ini terbuat dari beras yang dimasak hingga menjadi bubur kental dan lembut, lalu diberi sentuhan khas Manado melalui berbagai bumbu dan tambahan yang membuatnya istimewa. Salah satu ciri khasnya adalah pemakaian ikan cakalang yang diasap atau digoreng sebagai pelengkap, memberikan cita rasa gurih dan asap yang khas. Selain itu, Bubur Manado diperkaya dengan bumbu-bumbu rempah seperti serai, daun jeruk, daun salam, jahe, bawang merah, bawang putih, dan cabe rawit yang memberikan sentuhan pedas yang membangkitkan selera. Bubur ini juga biasanya disajikan dengan irisan tomat, daun seledri, dan perasan jeruk nipis untuk memberikan kesegaran. Kombinasi antara tekstur lembut dari bubur dan keharuman serta kepedasan dari bumbu-bumbu menjadikan Bubur Manado sebagai hidangan yang menggoda, memikat, dan memperkaya ragam kuliner Indonesia.',
     imageAsset: 'images/plaosan.jpeg',
     imageUrls: [
-      ''
-      ''
-      ''
-      '',
+      'https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/28050205/ini-cara-membuat-bubur-manado-yang-lezat-dan-kaya-nutrisi.jpg.webp'
+      'https://asset.kompas.com/crops/OW8rRJecUkSu5PK-Zg7cEHPejgk=/2x0:700x465/750x500/data/photo/2022/05/31/6295c8b093cfa.jpg'
+      'https://cdn.yummy.co.id/content-images/images/20231012/1c1a057da920fff3dc769269e4bd0a90.jpg?x-oss-process=image/format,webp'
+      'https://cdn.yummy.co.id/content-images/images/20231012/1c1a057da920fff3dc769269e4bd0a90.jpg?x-oss-process=image/format,webp',
     ],
     isFavorite: false,
   ),
@@ -120,10 +120,10 @@ var MasakanList = [
     'Ayam Taliwang, hidangan ikonik dari pulau Lombok, memukau lidah dengan harmoni cita rasa yang pedas dan gurih. Daging ayam kampung dipersiapkan secara khusus dengan bumbu rempah yang melibatkan kemiri, bawang merah, bawang putih, daun jeruk, serai, dan cabai rawit. Keunikan Ayam Taliwang terletak pada cara pengolahan ayam ini, yang dapat dipanggang atau dibakar, memberikan lapisan luar renyah dan aroma panggang yang menggoda. Rempah-rempah yang meresap dalam daging menciptakan cita rasa yang mendalam, sedangkan kepedasan cabai rawit memberikan sentuhan pedas yang menggigit. Hidangan ini biasanya disajikan dengan plecing kangkung, sayuran kangkung yang diberi sambal terasi, menciptakan kontrast yang menyegarkan. Ayam Taliwang bukan hanya makanan, melainkan perwujudan seni kuliner yang memadukan kekayaan rempah-rempah Indonesia dengan keahlian memasak lokal, menciptakan sebuah pengalaman gastronomi yang tak terlupakan.',
     imageAsset: 'images/',
     imageUrls: [
-      ''
-      ''
-      ''
-      '',
+      'https://asset.kompas.com/crops/-oAqlkfrKHaqebhytdtKz-JV6ls=/4x0:1000x664/750x500/data/photo/2020/12/22/5fe16c7655542.jpg'
+      'https://asset.kompas.com/crops/-oAqlkfrKHaqebhytdtKz-JV6ls=/4x0:1000x664/750x500/data/photo/2020/12/22/5fe16c7655542.jpg'
+      'https://awsimages.detik.net.id/community/media/visual/2021/06/06/resep-ayam-bakar-taliwang_43.jpeg?w=1200'
+      'https://cdn.idntimes.com/content-images/community/2018/05/ayam-bakar-taliwang-429c851601ac3894a88ca628ecf2a765_600x400.jpg',
     ],
     isFavorite: false,
   ),
@@ -134,10 +134,10 @@ var MasakanList = [
     'Papeda, hidangan khas Maluku dan Papua, Indonesia, adalah perpaduan unik dari sagu dan air yang menghasilkan hidangan pati yang lekat dan kenyal. Proses persiapan Papeda melibatkan pencampuran tepung sagu dengan air dan diaduk hingga membentuk adonan yang kental. Hidangan ini sering disajikan dengan kuah ikan, cakalang, atau tongkol yang kaya rempah, yang memberikan cita rasa gurih dan lezat. Papeda biasanya dimakan bersama lauk pauk khas Maluku dan Papua, seperti ikan kuah kuning, ikan tongkol, atau ikan bakar. Keunikan Papeda terletak pada tekstur kenyal dan lekatnya, yang membutuhkan keterampilan khusus dalam mengonsumsinya. Biasanya dimakan dengan cara dicabik kecil menggunakan dua jari, kemudian dicelupkan ke dalam kuah ikan sebelum dimakan. Papeda tidak hanya makanan pokok, tetapi juga warisan kultural yang memperkaya keanekaragaman kuliner Indonesia. Hidangan ini menciptakan pengalaman menyantap yang berbeda, menggabungkan sederhana tapi kaya rasa, serta memperlihatkan kekayaan bahan-bahan alam lokal.',
     imageAsset: 'images/',
     imageUrls: [
-      ''
-      ''
-      ''
-      '',
+      'https://bangunpapua.com/storage/2022/07/Ilustrasi-Papeda.jpg'
+      'https://dispar.malukuprov.go.id/wp-content/uploads/2021/01/PAPEDA-IKAN-KUAH-KUNING-scaled.jpg'
+      'https://awsimages.detik.net.id/community/media/visual/2019/09/06/14cc42ca-a8d6-43b9-baa5-016660b9cd0e_169.jpeg?w=600&q=90'
+      'https://cdn.idntimes.com/content-images/post/20170720/26416267960-6af30de59d-b-1165ff7098a393ce6e23e7b02b04616f_600x400.jpg',
     ],
     isFavorite: false,
   ),
