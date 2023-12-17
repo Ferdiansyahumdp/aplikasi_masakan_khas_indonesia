@@ -53,7 +53,7 @@ class _SearchScreenState extends State<SearchScreen> {
             child: ListView.builder(
               itemCount: _filteredMasakan.length,
               itemBuilder: (context, index){
-                final candi = _filteredMasakan[index];
+                final masakan = _filteredMasakan[index];
                 return Card(
                   margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   child: Row(
