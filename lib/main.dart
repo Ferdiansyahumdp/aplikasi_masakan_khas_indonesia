@@ -45,11 +45,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home : ProfilScreen(),
-      home: DetailScreen(masakan: MasakanList[0]),
+      // home: DetailScreen(masakan: MasakanList[0]),
       // home: SignUpScreen(),
       // home : SearchScreen(),
       //home: HomeScreen(),
-      // home: MainScreen(),
+       home: MainScreen(),
     );
   }
 }

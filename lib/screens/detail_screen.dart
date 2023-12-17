@@ -128,19 +128,14 @@ class _DetailScreenState extends State<DetailScreen> {
                   SizedBox(height: 16,),
                   Row(
                     children: [
-                      Text(
-                        'Deskripsi', style: TextStyle(
+                      Text('Deskripsi', style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      ),
-                    ],
-                  ),
+                        fontWeight: FontWeight.bold,),),
+                    ],),
                   SizedBox(height: 16,),
                   Container(
                     height: 100,
-                    child: Text(
-                      'Rendang, hidangan yang berasal dari Minangkabau, Sumatra Barat, Indonesia, adalah sebuah masterpiece kuliner yang memikat dengan kekayaan rasa dan aroma yang mendalam. Daging sapi yang dipotong kecil-kecil, sering kali menggunakan potongan daging yang berlemak dan berserat, dimasak dalam santan kelapa yang pekat dan dipadu dengan sejumlah besar rempah-rempah. Proses memasaknya yang lambat dan intens menghasilkan daging yang empuk, berwarna gelap, dan bumbu yang meresap hingga ke setiap seratnya. Bumbu rendang melibatkan campuran rempah-rempah seperti serai, daun salam, daun jeruk, lengkuas, bawang merah, bawang putih, cabe merah, ketumbar, jintan, dan kencur. Hasilnya adalah kuah yang kental, gurih, dan penuh dengan cita rasa yang kompleks. Rendang sering kali disajikan dengan nasi putih, dan kelezatannya meningkat seiring waktu karena bumbu meresap lebih dalam ke dalam daging. Hidangan ini bukan hanya sebuah sajian, melainkan perwujudan seni kuliner Indonesia yang kaya dan mendalam, menciptakan pengalaman makan yang tak terlupakan.',
+                    child: Text('${widget.masakan.description}',
                       style: TextStyle(
                         fontSize: 14,
                       ),

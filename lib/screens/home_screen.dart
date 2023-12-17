@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // TODO : 1. Buat appBar dengan judul wisata candi
-      appBar: AppBar(title: Text('Wisata Candi'),),
+      appBar: AppBar(title: Text('Makanan Khas Indonesia'),),
       // TODO : 2. Body dengan gridview.builder
       body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
