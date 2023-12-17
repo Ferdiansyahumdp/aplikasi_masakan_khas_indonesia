@@ -20,7 +20,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // TODO : 2. Buat appBar dengal judul pencarian candi
-      appBar: AppBar(title: Text('Pencarian Candi'),),
+      appBar: AppBar(title: Text('Pencarian Masakan'),),
       // TODO : 3. Buat body berupa column
       body: Column(
         children: [
@@ -30,16 +30,16 @@ class _SearchScreenState extends State<SearchScreen> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.deepPurple[50],
+                color: Colors.blue[50],
               ),
               child: TextField(
                 autofocus: false,
                 decoration: InputDecoration(
-                  hintText: 'Cari Candi...',
+                  hintText: 'Cari Masakan...',
                   prefixIcon: Icon(Icons.search),
                   border : InputBorder.none,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color : Colors.deepPurple),
+                    borderSide: BorderSide(color : Colors.blue),
                   ),
                   contentPadding: EdgeInsets.symmetric(
                       horizontal: 16,

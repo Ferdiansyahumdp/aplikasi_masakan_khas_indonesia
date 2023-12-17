@@ -31,16 +31,16 @@ class MyApp extends StatelessWidget {
       title: 'Masakan khas terkenal di Indonesia',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          iconTheme: IconThemeData(color: Colors.deepPurple),
+          iconTheme: IconThemeData(color: Colors.blue),
           titleTextStyle: TextStyle(
-            color: Colors.deepPurple,
+            color: Colors.blue,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple).copyWith(
-          primary: Colors.deepPurple,
-          surface: Colors.deepPurple[50],
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue).copyWith(
+          primary: Colors.blue,
+          surface: Colors.blue[50],
         ),
         useMaterial3: true,
       ),
@@ -83,19 +83,19 @@ class _MainScreenState extends State<MainScreen> {
           currentIndex: _currentIndex,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.deepPurple,),
+              icon: Icon(Icons.home, color: Colors.blue,),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search, color: Colors.deepPurple,),
+              icon: Icon(Icons.search, color: Colors.blue,),
               label: 'Search',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite, color: Colors.deepPurple,),
+              icon: Icon(Icons.favorite, color: Colors.blue,),
               label: 'Favorite',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.deepPurple,),
+              icon: Icon(Icons.person, color: Colors.blue,),
               label: 'Profile',
             ),
           ],
@@ -104,8 +104,8 @@ class _MainScreenState extends State<MainScreen> {
               _currentIndex = index;
             });
           },
-          selectedItemColor: Colors.deepPurple,
-          unselectedItemColor: Colors.deepPurple[100],
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.blue[100],
           showSelectedLabels: true,
           showUnselectedLabels: true,
         ),

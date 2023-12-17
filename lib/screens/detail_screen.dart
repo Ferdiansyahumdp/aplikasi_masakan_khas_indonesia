@@ -122,7 +122,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     Text(': ${widget.masakan.origin}',),
                   ],),
                   SizedBox(height: 16,),
-                  Divider(color: Colors.deepPurple.shade100,),
+                  Divider(color: Colors.blue.shade100,),
                   SizedBox(height: 16,),
                   //info bawah
                   SizedBox(height: 16,),
@@ -151,7 +151,7 @@ class _DetailScreenState extends State<DetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Divider(color: Colors.deepPurple.shade100,),
+                  Divider(color: Colors.blue.shade100,),
                   Text('Galeri', style: TextStyle(
                     fontSize: 16, fontWeight: FontWeight.bold,
                   ),),
@@ -178,7 +178,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   placeholder: (context, url) => Container(
                                     width: 120,
                                     height: 120,
-                                    color: Colors.deepPurple[50],
+                                    color: Colors.blue[50],
                                   ),
                                   errorWidget: (context, url, error) => Icon(Icons.error),
                                 ),

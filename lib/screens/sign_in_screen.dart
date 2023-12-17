@@ -136,7 +136,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 RichText(
                     text: TextSpan(
                         text: 'Belum punya akun?',
-                        style: TextStyle(fontSize: 16, color: Colors.deepPurple),
+                        style: TextStyle(fontSize: 16, color: Colors.blue),
                         children: <TextSpan>[
                           TextSpan(
                             text: 'Daftar di sini.',
