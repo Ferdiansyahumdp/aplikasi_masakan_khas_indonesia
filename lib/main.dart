@@ -7,7 +7,6 @@ import 'package:masakankhas_indonesia/screens/search_screen.dart';
 import 'package:masakankhas_indonesia/screens/sign_in_screen.dart';
 import 'package:masakankhas_indonesia/screens/sign_up_screen.dart';
 import 'package:masakankhas_indonesia/screens/favorite_screen.dart';
-import 'package:masakankhas_indonesia/screens/home_screen.dart';
 
 
 void main() {
