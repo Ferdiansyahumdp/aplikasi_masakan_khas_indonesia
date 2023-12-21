@@ -44,12 +44,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
       print('Terjadi Kesalahan : $e');
     }
 
-     print('*** Sign up berhasil!');
-     print('fullname : $name');
-     print('username : $username');
-     print('password : $password');
+    // print('*** Sign up berhasil!');
+    // print('fullname : $name');
+    // print('username : $username');
+    // print('password : $password');
 
-    Navigator.pushReplacementNamed(context, '/signin');
+    Navigator.pushReplacementNamed(context,'/signin');
   }
 
 

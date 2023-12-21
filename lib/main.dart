@@ -20,15 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/' : (context) => MainScreen(),
-        // '/detail' : (context) => DetailScreen(candi: candi),
-        '/signin' : (context) => SignInScreen(),
-        '/signup' : (context) => SignUpScreen(),
-      },
       debugShowCheckedModeBanner: false,
-      title: 'Masakan khas terkenal di Indonesia',
+      title: 'Masakan Khas Indonesia',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: Colors.blue),
@@ -44,15 +37,18 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      // home : ProfilScreen(),
-      // home: DetailScreen(masakan: MasakanList[0]),
-      // home: SignUpScreen(),
-      // home : SearchScreen(),
-      //home: HomeScreen(),
-       home: MainScreen(),
+      home: MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/homescreen': (context) => const HomeScreen(),
+        '/signin': (context) => const SignInScreen(),
+        '/signup': (context) =>  SignUpScreen(),
+        '/favorite' :(context) => FavoriteScreen(),
+      },
     );
   }
 }
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -64,10 +60,10 @@ class _MainScreenState extends State<MainScreen> {
   // TODO : 1. Deklerasikan variabel
   int _currentIndex = 0;
   final List<Widget> _children = [
-    HomeScreen(),
-    SearchScreen(),
+    const HomeScreen(),
+    const SearchScreen(),
     FavoriteScreen(),
-    ProfilScreen(),
+    const ProfilScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -77,11 +73,16 @@ class _MainScreenState extends State<MainScreen> {
       // TODO : 3. Buat properti bottomNavigationBar dengan nilai theme
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
-            canvasColor: Colors.deepPurple[50]
+            canvasColor: Colors.blue[50]
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
-          items: [
+          onTap: (index){
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.blue,),
               label: 'Home',
@@ -99,14 +100,8 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Profile',
             ),
           ],
-          onTap: (index){
-            setState(() {
-              _currentIndex = index;
-            });
-          },
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.blue[100],
-          showSelectedLabels: true,
           showUnselectedLabels: true,
         ),
       ),
@@ -115,13 +110,4 @@ class _MainScreenState extends State<MainScreen> {
 
   }
 }
-
-// class ScreenArguments {
-//   final String title;
-//   final String message;
-//
-//   ScreenArguments(this.title, this.message);
-// }
-
-
 

@@ -1,12 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:masakankhas_indonesia/models/masakan.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '';
 class  DetailScreen extends StatefulWidget {
-  final  Masakan masakan;
-
+  final Masakan masakan;
   DetailScreen ({super.key, required this.masakan});
 
   @override
@@ -16,6 +15,29 @@ class  DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   bool isFavorite = false;
   bool isSignedIn = false;
+
+  @override
+  void initState(){
+    super.initState();
+    _checkSignInStatus();
+    _loadFavoriteStatus();
+  }
+
+  void _checkSignInStatus() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool signedIn = prefs.getBool('isSignedIn') ?? false;
+    setState(() {
+      isSignedIn = signedIn;
+    });
+  }
+
+  void _loadFavoriteStatus() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool favorite = prefs.getBool('favorite_${widget.masakan.name}') ?? false;
+    setState(() {
+      isFavorite= favorite;
+    });
+  }
 
   Future<void> _toggleFavorite() async{
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -27,16 +49,26 @@ class _DetailScreenState extends State<DetailScreen> {
       });
       return;
     }
-    bool favoriteStatus = !isFavorite;
-    prefs.setBool('favorite_${widget.masakan.name}', favoriteStatus);
+    List<String> favorite = prefs.getStringList('favorite') ?? [];
+
+    // Check if the cafe is already in favorites
+    if (isFavorite) {
+      favorite.remove(widget.masakan.name);
+    } else {
+      favorite.add(widget.masakan.name);
+    }
+
+    // Save the updated list of favorites
+    prefs.setStringList('favorite', favorite);
 
     setState(() {
-      isFavorite = favoriteStatus;
+      isFavorite = !isFavorite;
     });
+
+    if(!isFavorite){
+      Navigator.of(context).pop(widget.masakan.name);
+    }
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +80,17 @@ class _DetailScreenState extends State<DetailScreen> {
             Stack(
               children:[
                 //image utama
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal :16),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset('${widget.masakan.imageAsset}',
-                      width: double.infinity,
-                      height: 200,
-                      fit: BoxFit.cover,),
+                Hero(
+                  tag: widget.masakan.imageAsset,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal :16),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset('${widget.masakan.imageAsset}',
+                        width: double.infinity,
+                        height: 200,
+                        fit: BoxFit.cover,),
+                    ),
                   ),
                 ),
                 Padding(
@@ -63,7 +98,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.deepPurple[100]?.withOpacity(0.8),
+                      color: Colors.blue[100]?.withOpacity(0.8),
                       shape: BoxShape.circle,
                     ),
                     child: IconButton(
@@ -165,7 +200,6 @@ class _DetailScreenState extends State<DetailScreen> {
                         return Padding
                           (padding: EdgeInsets.only(right: 8),
                           child: GestureDetector(
-                            onTap: () {},
                             child: Container(
                               decoration: BoxDecoration(),
                               child: ClipRRect(
@@ -192,7 +226,8 @@ class _DetailScreenState extends State<DetailScreen> {
                   SizedBox(height: 4,),
                   Text('Tap untuk memperbesar', style: TextStyle(
                     fontSize: 12, color: Colors.black54,
-                  ),),
+                  ),
+                  ),
                 ],
               ),
             )
@@ -202,3 +237,4 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 }
+

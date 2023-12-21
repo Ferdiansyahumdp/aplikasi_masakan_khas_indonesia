@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:masakankhas_indonesia/screens/detail_screen.dart';
 
 import '../models/masakan.dart';
+import '../screens/detail_screen.dart';
+
+
 
 class ItemCard extends StatelessWidget {
   // TODO : 1. Deklarasikan variabel yang dibutuhkan dan padang pada konstruktor
@@ -33,12 +35,15 @@ class ItemCard extends StatelessWidget {
             // TODO : 3. Buat Image sebagai anak dari column
             Expanded(
               // TODO : 7. Implementasi Hero animation
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset
-                  (masakan.imageAsset,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+              child: Hero(
+                tag: masakan.imageAsset,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset
+                    (masakan.imageAsset,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

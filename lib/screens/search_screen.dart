@@ -1,83 +1,105 @@
 import 'package:flutter/material.dart';
 import 'package:masakankhas_indonesia/data/masakan_data.dart';
-
 import '../models/masakan.dart';
+import 'detail_screen.dart';
 
 class SearchScreen extends StatefulWidget {
-  const SearchScreen({super.key});
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  // TODO : 1. Deklarasikan variabel yang dibutuhkan
-  List<Masakan> _filteredMasakan = MasakanList;
+  List<Masakan> _filteredMasakan = [];
   String _searchQuery = '';
   final TextEditingController _searchController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    _filteredMasakan = [];
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // TODO : 2. Buat appBar dengal judul pencarian candi
-      appBar: AppBar(title: Text('Pencarian Masakan'),),
-      // TODO : 3. Buat body berupa column
+      appBar: AppBar(
+        title: Text('Pencarian Masakan'),
+      ),
       body: Column(
         children: [
-          // TODO : 4. Buat Textfield pencarian sebagai anak dari column
           Padding(
             padding: const EdgeInsets.all(16),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color: Colors.blue[50],
+                color: Colors.brown[50],
               ),
               child: TextField(
+                controller: _searchController,
+                onChanged: (query) {
+                  // Call the search function whenever the text changes
+                  _searchMasakan(query);
+                },
                 autofocus: false,
                 decoration: InputDecoration(
                   hintText: 'Cari Masakan...',
                   prefixIcon: Icon(Icons.search),
-                  border : InputBorder.none,
+                  border: InputBorder.none,
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color : Colors.blue),
+                    borderSide: BorderSide(color: Colors.brown),
                   ),
                   contentPadding: EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 12),
+                    horizontal: 16,
+                    vertical: 12,
+                  ),
                 ),
               ),
             ),
           ),
-          // TODO : 5. Buat listview hasil pencarian sebagai anak dari column
           Expanded(
             child: ListView.builder(
               itemCount: _filteredMasakan.length,
-              itemBuilder: (context, index){
+              itemBuilder: (context, index) {
                 final masakan = _filteredMasakan[index];
                 return Card(
                   margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding : EdgeInsets.all(8),
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                            borderRadius : BorderRadius.circular(10),
-                            child: Image.asset(masakan.imageAsset, fit: BoxFit.cover,)),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(masakan.name, style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold,
-                          ),),
-                          SizedBox(height : 4),
-                          Text(masakan.origin),
-                        ],
-                      ),
-                    ],
+                  child: GestureDetector(
+                    onTap: () {
+                      _navigateToDetailScreen(masakan);
+                    },
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8),
+                          width: 100,
+                          height: 100,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.asset(
+                              masakan.imageAsset,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              masakan.name,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 4),
+                            Text(masakan.origin),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -85,8 +107,24 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ],
       ),
-
-
     );
   }
+
+  void _searchMasakan(String query) {
+    setState(() {
+      _filteredMasakan = MasakanList
+          .where((masakan) =>
+          masakan.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    });
+  }
+  void _navigateToDetailScreen(Masakan masakan) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetailScreen(masakan: masakan),
+      ),
+    );
+  }
+
 }

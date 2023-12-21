@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../data/masakan_data.dart';
 import '../models/masakan.dart';
-import 'detail_screen.dart';
+import 'package:masakankhas_indonesia/screens/detail_screen.dart';
 
 class FavoriteScreen extends StatefulWidget {
   @override
@@ -29,8 +29,8 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   }
 
   void _navigateToDetailScreen(String masakanName) {
-    // Find the corresponding Masakan object based on the masakanName
-    Masakan masakan = MasakanList.firstWhere((masakan) => masakan.name == masakanName);
+    // Find the corresponding Masakan object based on the MasakanName
+    Masakan masakan= MasakanList.firstWhere((masakan) => masakan.name == masakanName);
 
     Navigator.push(
       context,
@@ -63,9 +63,9 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
     );
   }
 
-  Widget _buildCafeCard(String masakanName) {
+  Widget _buildMasakanCard(String masakanName) {
     // Find the corresponding Masakan object based on the masakanName
-    Masakan masakan = MasakanList.firstWhere((masakan) => masakan.name == masakanName);
+    Masakan masakan = MasakanList.firstWhere((masakan) => masakanName == masakanName);
 
     return Card(
       margin: EdgeInsets.all(8),
@@ -90,7 +90,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       body: ListView.builder(
         itemCount: favorite.length,
         itemBuilder: (context, index) {
-          return _buildCafeCard(favorite[index]);
+          return _buildMasakanCard(favorite[index]);
         },
       ),
     );
