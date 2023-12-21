@@ -65,7 +65,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
 
   Widget _buildCafeCard(String masakanName) {
     // Find the corresponding Masakan object based on the masakanName
-    Masakan masakan = MasakanList.firstWhere((cafe) => cafe.name == masakanName);
+    Masakan masakan = MasakanList.firstWhere((masakan) => masakan.name == masakanName);
 
     return Card(
       margin: EdgeInsets.all(8),
